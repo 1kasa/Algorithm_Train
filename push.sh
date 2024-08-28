@@ -1,0 +1,34 @@
+echo "Ready to execte script"
+
+# 默认 git commit message
+msg="update: default by script"
+
+# 默认 commit 分支
+branch="main"
+
+if [ -n "$1" ]; 
+then
+  msg=$1
+fi
+
+if [ -n "$2"]
+then
+  branch=$2
+fi
+
+echo "git commit message: [$msg]"
+echo "git branch: [$branch]"
+
+read -p "Press Enter to continue..."
+
+# 执行提交流程
+git add .
+git status
+
+sleep 1
+
+git commit -m "$msg"
+
+read -p "Press Enter to continue"
+
+git push origin "$branch"
