@@ -5,7 +5,7 @@ func generateMatrix(n int) [][]int {
 	for i := range res {
 		res[i] = make([]int, n)
 	}
-	startX, startY := 0, 0
+	startX, startY := 0, 0	
 	mid := n / 2
 	count, offset := 1, 1
 	for loop := n / 2; loop > 0; loop-- {
