@@ -17,7 +17,7 @@ func maxTotalReward(rewardValues []int) int {
 	res := 0
 	for i := 0; i < len(dp); i++ {
 		if dp[i] == 1 {
-			res += i
+			res = i
 		}
 	}
 	return res
